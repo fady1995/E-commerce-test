@@ -12,13 +12,13 @@ public class C8_TagDef {
 
     P3_HomPag Pag3 = new P3_HomPag();
 
-    @Given("user select category Apparel")
-    public void userSelectCategoryApparel() {
+    @Given("chose Apparel category")
+    public void chose_appa_cat() {
         Pag3.apparel().click();
     }
 
-    @Then("user select tag name from list")
-    public void userSelectTagNameFromList() throws InterruptedException {
+    @Then("chose tag name")
+    public void chose_tag_name() throws InterruptedException {
         Thread.sleep(2500);
         Pag3.tagone().click();
         Thread.sleep(2500);
@@ -28,19 +28,19 @@ public class C8_TagDef {
             System.out.println(value);
             Assert.assertTrue(true, value);
         }
-        String expectResult = "Products tagged with 'awesome'";
+        String expectResult = "Products tagged with 'nice'";
         String actualResult = Pag3.flashTxt().getText();
         SoftAssert soft = new SoftAssert();
         soft.assertTrue(actualResult.contains(expectResult));
         soft.assertTrue(Pag3.flashTxt().isDisplayed());
-        soft.assertEquals(Hooks.driver.getCurrentUrl(), "https://demo.nopcommerce.com/awesome");
+        soft.assertEquals(Hooks.driver.getCurrentUrl(), "https://demo.nopcommerce.com/nice");
         System.out.println(" Your Actual Result : " + actualResult);
         soft.assertAll();
 
     }
 
-    @And("user could select another tag")
-    public void userCouldSelectAnotherTag() throws InterruptedException {
+    @And("should be able to select different tag")
+    public void chose_diffe_tag() throws InterruptedException {
         Thread.sleep(2500);
         Pag3.tagtwo().click();
         Thread.sleep(2500);
@@ -50,12 +50,12 @@ public class C8_TagDef {
             System.out.println(value);
             Assert.assertTrue(true, value);
         }
-        String expectResult = "Products tagged with 'cool'";
+        String expectResult = "Products tagged with 'jeans'";
         String actualResult = Pag3.flashTxt().getText();
         SoftAssert soft2 = new SoftAssert();
         soft2.assertTrue(actualResult.contains(expectResult));
         soft2.assertTrue(Pag3.flashTxt().isDisplayed());
-        soft2.assertEquals(Hooks.driver.getCurrentUrl(), "https://demo.nopcommerce.com/cool");
+        soft2.assertEquals(Hooks.driver.getCurrentUrl(), "https://demo.nopcommerce.com/jeans");
         System.out.println(" Your Actual Result : " + actualResult);
         soft2.assertAll();
     }

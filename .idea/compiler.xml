@@ -8,6 +8,7 @@
         <outputRelativeToContentRoot value="true" />
         <module name="untitled123" />
         <module name="E-commerce" />
+        <module name="E-commerce test" />
       </profile>
     </annotationProcessing>
   </component>

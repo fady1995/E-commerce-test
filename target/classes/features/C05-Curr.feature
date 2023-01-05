@@ -1,15 +1,14 @@
 @smoke
 
-Feature: User can Change Products Currencies
- Background: Open Browser and Navigate to Page
-  Given user go to login page
-  Then user enter email "testEmail@1example.com" and Password "Fady@1234"
-  When user clicks on login button
+Feature: Change Currencies
 
-  #Scenario SC5
-  Scenario: SC5- Logged User could switch between currencies US-Euro
-   Given user clicks on currencies list and select euro
-   Then user can see € sign in products
+ Background: Browser will open then Navigate
+
+  #Scenario 5
+  Scenario: Logged User could switch between currencies US-Euro
+
+   Given chose Euro from currencies list
+   Then the currencie will change
 
 
 

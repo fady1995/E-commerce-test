@@ -12,8 +12,8 @@ public class C1_RegDef {
 
     P1_Regi Pag1 = new P1_Regi();
 
-    @Given("user go to register page")
-    public void registerPage() throws InterruptedException {
+    @Given("open registration page")
+    public void open_registration_page() throws InterruptedException {
 
         Pag1.regBtn().click();
         System.out.println("Register page open successfully");
@@ -21,20 +21,20 @@ public class C1_RegDef {
     }
 
 
-    @Then("user select gender type")
-    public void userSelectGenderType() {
+    @Then("select gender")
+    public void select_gender() {
 
         Pag1.GenderType().click();
     }
 
-    @And("user enter first name {string} and last name {string}")
-    public void userEnterFirstNameAndLastName(String arg0, String arg1) {
+    @And("insert first name {string} and insert last name {string}")
+    public void insert_names(String arg0, String arg1) {
         Pag1.firstNam().sendKeys(arg0);
         Pag1.lasNam().sendKeys(arg1);
     }
 
-    @Then("user enter date of birth")
-    public void userEnterDateOfBirth() throws InterruptedException {
+    @Then("select date of birth")
+    public void select_date_of_birth() throws InterruptedException {
 
         Select select = new Select(Pag1.Dateday());
         select.selectByIndex(8);
@@ -48,26 +48,26 @@ public class C1_RegDef {
         Thread.sleep(1500);
     }
 
-    @Then("user enter email {string} field and company name and check options")
-    public void userEnterEmailField(String arg0) {
+    @Then("write your email {string} and company name")
+    public void enter_email(String arg0) {
         Pag1.email().sendKeys(arg0);
         Pag1.infocompany().sendKeys("New Register");
         Pag1.newsletter().click();
     }
 
-    @And("user enter Password fields {string} {string}")
-    public void userEnterPassword(String arg0, String arg1) {
+    @And("insert the your pass then confirm it {string} {string}")
+    public void Enter_Password(String arg0, String arg1) {
         Pag1.passtext().sendKeys(arg0);
         Pag1.confpasstxt().sendKeys(arg1);
     }
 
-    @Then("user clicks on register button")
-    public void userClicksBut() {
+    @Then("click on the button to complete the registration")
+    public void But_click() {
         Pag1.creatBtn().submit();
     }
 
-    @Then("success message is displayed in Screen")
-    public void successMsgIsShown() throws InterruptedException {
+    @Then("success message should appear")
+    public void success_masg_appear() throws InterruptedException {
 
         String expectedResult = "Your registration completed";
         String actualResult = Pag1.pagebod().getText();

@@ -1,20 +1,19 @@
 @smoke
 
-  Feature: User can View Products & Search
+  Feature: Search for products
 
-    Background: Open Browser and Navigate to Page
-      Given user go to login page
-      Then user enter email "testmail@gmail.com" and Password "Fady@1234"
-      When user clicks on login button
+    Background: Browser will open then Navigate
 
-      #Scenario SC4
-     Scenario Outline: SC4- Logged User could search for any product
-        Given user search for items in search box For "<products>"
+        #Scenario 4
+
+     Scenario Outline: Logged User could search for any product
+
+       Given search in search bar For "<productname>"
        Examples:
-       |products|
-       |Lenovo|
-       |Fahrenheit|
-       |Shoes    |
+       |productname|
+       |Camera|
+       |Software|
+       |Notebooks|
 
 
 

@@ -38,7 +38,8 @@ public List<WebElement> prodlist()
     public WebElement electronics() {
         return Hooks.driver.findElement(By.cssSelector("a[href=\"/electronics\"]"));
     }
-    public WebElement SubCateg () {
+
+    public WebElement SubCateg2() {
         return Hooks.driver.findElement(By.cssSelector("h2 a[href=\"/software\""));
     }
     public WebElement win8(){
@@ -52,11 +53,11 @@ public List<WebElement> prodlist()
     public WebElement shoes(){
         return Hooks.driver.findElement(By.cssSelector("h2 a[href=\"/shoes\"]"));
     }
-    public WebElement redcolor() {
-        return Hooks.driver.findElement(By.id("attribute-option-15"));
+    public WebElement blucolor() {
+        return Hooks.driver.findElement(By.id("attribute-option-16"));
     }
-    public WebElement tagone() { return Hooks.driver.findElement(By.cssSelector("a[href=\"/awesome\"]"));}
-    public WebElement tagtwo() { return Hooks.driver.findElement(By.cssSelector("a[href=\"/cool\"]"));}
+    public WebElement tagone() { return Hooks.driver.findElement(By.cssSelector("a[href=\"/nice\"]"));}
+    public WebElement tagtwo() { return Hooks.driver.findElement(By.cssSelector("a[href=\"/jeans\"]"));}
     public WebElement flashTxt () {
         return Hooks.driver.findElement(By.className("page-title"));
     }

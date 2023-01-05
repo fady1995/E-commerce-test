@@ -2,19 +2,19 @@
 @smoke
 @test1
 
-Feature: User Customer Registration
+Feature: Registration
 
-  Background: Open Browser and Navigate to Page
+  Background: Browser will open then Navigate
 
-  # Scenario SC1
-  Scenario: SC1- User could register with valid data
-    Given user go to register page
-    Then user select gender type
-    And user enter first name "ExName" and last name "ExName2"
-    Then user enter date of birth
-    Then user enter email "testmail@gmail.com" field and company name and check options
-    And user enter Password fields "Fady@1234" "Fady@1234"
-    Then user clicks on register button
-    Then success message is displayed in Screen
+  # Scenario 1
+  Scenario: User could register with valid data
+    Given open registration page
+    Then select gender
+    And insert first name "Name" and insert last name "Name2"
+    Then select date of birth
+    Then write your email "fadymail@gmail.com" and company name
+    And insert the your pass then confirm it "Fady@1234" "Fady@1234"
+    Then click on the button to complete the registration
+    Then success message should appear
 
 

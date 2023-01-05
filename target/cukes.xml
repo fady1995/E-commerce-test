@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<testsuite errors="0" failures="0" name="io.cucumber.core.plugin.JUnitFormatter" skipped="0" tests="15" time="572.98">
+<testcase classname="Registration" name="User could register with valid data" time="25.284">
+<system-out><![CDATA[Given open registration page................................................passed
+Then select gender..........................................................passed
+And insert first name "Name" and insert last name "Name2"...................passed
+Then select date of birth...................................................passed
+Then write your email "fadymail@gmail.com" and company name.................passed
+And insert the your pass then confirm it "Fady@1234" "Fady@1234"............passed
+Then click on the button to complete the registration.......................passed
+Then success message should appear..........................................passed
+]]></system-out>
+</testcase>
+<testcase classname="User should be able to login" name="User could log in with valid email and password" time="19.833">
+<system-out><![CDATA[Given log into the account..................................................passed
+Then enter your email "fadymail@gmail.com" and Password "Fady@1234".........passed
+When click on the button to login...........................................passed
+Then home page will open....................................................passed
+]]></system-out>
+</testcase>
+<testcase classname="Rest Password" name="could reset his/her password successfully" time="19.517">
+<system-out><![CDATA[Given log into the account..................................................passed
+Then click on Forget password to reset the pass.............................passed
+Then insert your email "fadymail@gmail.com".................................passed
+When click on Recover button................................................passed
+Then password will be rest successfully.....................................passed
+]]></system-out>
+</testcase>
+<testcase classname="Search for products" name="Logged User could search for any product" time="16.183">
+<system-out><![CDATA[Given search in search bar For "Camera".....................................passed
+]]></system-out>
+</testcase>
+<testcase classname="Search for products" name="Logged User could search for any product 2" time="15.751">
+<system-out><![CDATA[Given search in search bar For "Software"...................................passed
+]]></system-out>
+</testcase>
+<testcase classname="Search for products" name="Logged User could search for any product 3" time="16.481">
+<system-out><![CDATA[Given search in search bar For "Notebooks"..................................passed
+]]></system-out>
+</testcase>
+<testcase classname="Change Currencies" name="Logged User could switch between currencies US-Euro" time="12.781">
+<system-out><![CDATA[Given chose Euro from currencies list.......................................passed
+Then the currencie will change..............................................passed
+]]></system-out>
+</testcase>
+<testcase classname="Select different Categories" name="Logged user could select different Categories" time="18.532">
+<system-out><![CDATA[Given select different category from the drop menu..........................passed
+Then chose computers then sub cat Software..................................passed
+]]></system-out>
+</testcase>
+<testcase classname="Filter with Color" name="Logged user could filter with color" time="14.346">
+<system-out><![CDATA[Given chose Apparel then sub category Shoes.................................passed
+Then chose blu color........................................................passed
+Then view the option after filtration.......................................passed
+]]></system-out>
+</testcase>
+<testcase classname="Select different Tags" name="Logged user could select different tags" time="28.027">
+<system-out><![CDATA[Given chose Apparel category................................................passed
+Then chose tag name.........................................................passed
+And should be able to select different tag..................................passed
+]]></system-out>
+</testcase>
+<testcase classname="(Add &amp; Remove Product, Update Quantity)" name="Logged user could add different products to Shopping cart" time="38.656">
+<system-out><![CDATA[Given chose Apparel then sub category Shoes.................................passed
+Then chose blu color........................................................passed
+Then view the option after filtration.......................................passed
+And add product to Shop cart................................................passed
+Then chose electronics cat..................................................passed
+And chose cell phones Subcat................................................passed
+Then select Mobile Nokia lumia..............................................passed
+Then update mobile Quantity.................................................passed
+Then add mobile to Shop cart................................................passed
+]]></system-out>
+</testcase>
+<testcase classname="(Add &amp; Remove Product, Update Quantity)" name="Logged user could Update Quantity, Remove Product" time="82.234">
+<system-out><![CDATA[Given chose electronics cat.................................................passed
+And chose cell phones Subcat................................................passed
+Then select Mobile Nokia lumia..............................................passed
+Then update mobile Quantity.................................................passed
+Then add mobile to Shop cart................................................passed
+Then chose Apparel then sub category Shoes..................................passed
+Then chose blu color........................................................passed
+Then view the option after filtration.......................................passed
+And add product to Shop cart................................................passed
+And open Shop Cart page.....................................................passed
+Then update Shop cart Quantity..............................................passed
+And remove one item from shop cart..........................................passed
+]]></system-out>
+</testcase>
+<testcase classname="add different products to Wishlist" name="Logged user could add different products to Wishlist" time="102.194">
+<system-out><![CDATA[Given chose Apparel then sub category Shoes.................................passed
+Then chose blu color........................................................passed
+Then view the option after filtration.......................................passed
+Then confirm size and color.................................................passed
+Then add item to Wishlist...................................................passed
+Then chose computers then sub cat Software..................................passed
+And chose Sound Forge Pro 11 and add it  to Wishlist........................passed
+Then open Wishlist page then check the items................................passed
+]]></system-out>
+</testcase>
+<testcase classname="add different products to Compare list" name="Logged user could add different products to compare list" time="52.4">
+<system-out><![CDATA[Given go to Electronic cat..................................................passed
+And select Cell phone subcat................................................passed
+Then select Nokia lumia mobile..............................................passed
+Then add mobile to compare..................................................passed
+Then chose electronics cat..................................................passed
+And chose cell phones Subcat................................................passed
+Then chose Mobile HTC Mini Blue.............................................passed
+Then open Compare Page......................................................passed
+]]></system-out>
+</testcase>
+<testcase classname="Create A Successful Order" name="Logged user can Create successful Order" time="109.293">
+<system-out><![CDATA[Given log into the account..................................................passed
+Then enter your email "fadymail@gmail.com" and Password "Fady@1234".........passed
+When click on the button to login...........................................passed
+Given chose electronics cat.................................................passed
+And chose cell phones Subcat................................................passed
+Then select Mobile Nokia lumia..............................................passed
+Then update mobile Quantity.................................................passed
+Then add mobile to Shop cart................................................passed
+Then chose Apparel then sub category Shoes..................................passed
+Then chose blu color........................................................passed
+Then view the option after filtration.......................................passed
+And add product to Shop cart................................................passed
+And open Shop Cart page to buy..............................................passed
+Then update Shop cart Quantity..............................................passed
+Then agree and click on CheckOut............................................passed
+Then fill shipping template.................................................passed
+When check out then order will be completed.................................passed
+]]></system-out>
+</testcase>
+</testsuite>

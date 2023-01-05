@@ -1,21 +1,20 @@
 @smoke
 
-  Feature: Logged user could add different products to Wishlist
+  Feature: add different products to Wishlist
 
-    Background: Open Browser and Navigate to Page
-      Given user go to login page
-      Then user enter email "testmail@gmail.com" and Password "Fady@1234"
-      When user clicks on login button
+    Background: Browser will open then Navigate
 
-      #Scenario: SC10
-    Scenario: SC10- Logged user could add different products to Wishlist
-      Given user select Apparel and go to sub category Shoes
-      Then user select color red from CheckBox
-      Then user select size and color
-      Then user add item to Wishlist
-      Then user select Computers and go to sub category Software
-      And user select Windows-8-Pro and added to Wishlist
-      Then user go to Wishlist page and view items
+      #Scenario 10
+
+    Scenario: Logged user could add different products to Wishlist
+      Given chose Apparel then sub category Shoes
+      Then chose blu color
+      Then view the option after filtration
+      Then confirm size and color
+      Then add item to Wishlist
+      Then chose computers then sub cat Software
+      And chose Sound Forge Pro 11 and add it  to Wishlist
+      Then open Wishlist page then check the items
 
 
 

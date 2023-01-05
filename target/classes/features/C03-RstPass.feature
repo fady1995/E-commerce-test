@@ -1,17 +1,19 @@
 
 @smoke
 
-Feature: User Could Rest Password
+Feature: Rest Password
 
-  Background: Open Browser and Navigate to Page
+  Background: Browser will open then Navigate
 
 
-  # Scenario SC3
-  Scenario: SC3-  could reset his/her password successfully
-    Given user go to login page
-    Then user clicks on Forget password Link
-    Then user enter email "testmail@gmail.com"
-    When user clicks on Recover button
-    Then Success massage appears on screen
+  # Scenario 3
+
+  Scenario: could reset his/her password successfully
+
+    Given log into the account
+    Then click on Forget password to reset the pass
+    Then insert your email "fadymail@gmail.com"
+    When click on Recover button
+    Then password will be rest successfully
 
 

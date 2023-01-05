@@ -16,13 +16,13 @@ public class C12_OrdDef {
     P6_MakOrd Pag6 = new P6_MakOrd();
 
 
-    @Then("user check Agree Box and press CheckOut")
-    public void userCheckAgreeBoxAndPressCheckOut() {
+    @Then("agree and click on CheckOut")
+    public void agree_checkout() {
         Pag6.termsOf().click();
         Pag6.checkOut().click();
     }
-    @Then("user fill shipping form")
-    public void userFillShippingForm() throws InterruptedException {
+    @Then("fill shipping template")
+    public void fill_shipping_template() throws InterruptedException {
 
         Select select = new Select(Pag6.country());
         select.selectByVisibleText("Egypt");
@@ -31,17 +31,17 @@ public class C12_OrdDef {
 
         Thread.sleep(1500);
         Pag6.City().clear();
-        Pag6.City().sendKeys("City Example1");
+        Pag6.City().sendKeys("City");
         Pag6.BilAdress().clear();
-        Pag6.BilAdress().sendKeys("Address Example1");
+        Pag6.BilAdress().sendKeys("Address");
         Pag6.ZipCode().clear();
-        Pag6.ZipCode().sendKeys("123451");
+        Pag6.ZipCode().sendKeys("54367");
         Pag6.phone().clear();
-        Pag6.phone().sendKeys("01234567891");
+        Pag6.phone().sendKeys("01234564365");
     }
 
-    @When("User Check Out Order Successfully")
-    public void userCheckOutOrderSuccessfully() throws InterruptedException {
+    @When("check out then order will be completed")
+    public void checkout_ordercomplete() throws InterruptedException {
         Thread.sleep(2000);
         Pag6.CheckoutBut().click();
         Thread.sleep(2000);
@@ -64,8 +64,8 @@ public class C12_OrdDef {
         order.assertAll();
     }
 
-    @And("user go to Shopping Cart page to buy")
-    public void userGoToShoppingCartPageToBuy() throws InterruptedException {
+    @And("open Shop Cart page to buy")
+    public void open_shop_cart_tobuy() throws InterruptedException {
         Thread.sleep(3000);
         Pag6.ShopCartBut().click();
         Thread.sleep(3000);

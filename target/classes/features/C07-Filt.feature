@@ -1,17 +1,16 @@
 @smoke
 
-  Feature: User could Filter with Color
+  Feature: Filter with Color
 
-    Background: Open Browser and Navigate to Page
-      Given user go to login page
-      Then user enter email "testmail@gmail.com" and Password "Fady@1234"
-      When user clicks on login button
+    Background: Browser will open then Navigate
 
-    #Scenario SC7
-    Scenario: SC7- Logged user could filter with color
-    Given user select Apparel and go to sub category Shoes
-      Then user select color red from CheckBox
-      Then filter option view results
+    #Scenario 7
+
+    Scenario: Logged user could filter with color
+
+    Given chose Apparel then sub category Shoes
+      Then chose blu color
+      Then view the option after filtration
 
 
 

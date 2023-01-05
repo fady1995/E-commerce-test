@@ -13,8 +13,8 @@ public class C4_SearDef {
 
 
 
-    @Given("user search for items in search box For {string}")
-    public void userSearchForItemsInSearchBoxFor(String arg0) throws InterruptedException {
+    @Given("search in search bar For {string}")
+    public void search_item(String arg0) throws InterruptedException {
         Pag3.searchBox().sendKeys(arg0);
         Pag3.searchBox().submit();
         for (double x = 0; x < Pag3.TextItem().size(); x++ )

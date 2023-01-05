@@ -24,14 +24,14 @@ public class P4_ShopCart {
     public WebElement SubcatElc() {
         return Hooks.driver.findElement(By.cssSelector("h2 a[href=\"/cell-phones\"]"));
     }
-    public WebElement HTC_M8(){
-        return Hooks.driver.findElement(By.cssSelector("h2 a[href=\"/htc-one-m8-android-l-50-lollipop\"]"));
+    public WebElement Nokia_lumia(){
+        return Hooks.driver.findElement(By.cssSelector("h2 a[href=\"/nokia-lumia-1020\"]"));
     }
-    public WebElement HTCaddbu(){
-        return Hooks.driver.findElement(By.id("product_enteredQuantity_18"));
+    public WebElement NokiaCaddbu(){
+        return Hooks.driver.findElement(By.id("product_enteredQuantity_20"));
     }
-    public WebElement HTCcartbut(){
-        return Hooks.driver.findElement(By.id("add-to-cart-button-18"));
+    public WebElement Nokiacartbut(){
+        return Hooks.driver.findElement(By.id("add-to-cart-button-20"));
     }
     public WebElement ShopCartBut(){
         return Hooks.driver.findElement(By.className("ico-cart"));

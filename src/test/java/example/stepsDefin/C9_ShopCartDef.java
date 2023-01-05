@@ -11,7 +11,7 @@ public class C9_ShopCartDef {
 
     P4_ShopCart Pag4 = new P4_ShopCart();
 
-    @And("user add item to Shopping cart")
+    @And("add product to Shop cart")
     public void addItemsToShop() throws InterruptedException {
         Thread.sleep(2000);
         Pag4.shoAdd().click();
@@ -30,25 +30,25 @@ public class C9_ShopCartDef {
         Thread.sleep(3000);
     }
 
-    @Then("user go to Electronics category")
-    public void userGoToElectronicsCategory() {
+    @Then("chose electronics cat")
+    public void chose_electronics_catego() {
         Pag4.electronics().click();
     }
 
-    @And("user select Cell phones Subcategory")
-    public void userSelectCellPhonesSubcategory() {
+    @And("chose cell phones Subcat")
+    public void chose_cell_pho_sub() {
         Pag4.SubcatElc().click();
     }
 
-    @Then("user select Mobile HTC One M-8")
-    public void userSelectMobileHTCOneM()  {
-        Pag4.HTC_M8().click();
+    @Then("select Mobile Nokia lumia")
+    public void select_Mobile_Nokia_lumia()  {
+        Pag4.Nokia_lumia().click();
     }
 
-    @Then("user add mobiles to Quantity")
-    public void userAddMobilesToQuantity() throws InterruptedException {
-        Pag4.HTCaddbu().clear();
-        Pag4.HTCaddbu().sendKeys("1");
+    @Then("update mobile Quantity")
+    public void upd_mob_qua() throws InterruptedException {
+        Pag4.NokiaCaddbu().clear();
+        Pag4.NokiaCaddbu().sendKeys("1");
         Thread.sleep(2000);
         for (double x = 0; x < Pag4.priceValue().size(); x++ )
         {
@@ -57,10 +57,10 @@ public class C9_ShopCartDef {
             Assert.assertTrue(true, value);
         }
     }
-    @Then("user add mobile to Shopping cart")
-    public void userAddMobileToShoppingCart() throws InterruptedException {
+    @Then("add mobile to Shop cart")
+    public void add_mob_shop_cart() throws InterruptedException {
 
-        Pag4.HTCcartbut().click();
+        Pag4.Nokiacartbut().click();
         Thread.sleep(3000);
         SoftAssert mobbuy = new SoftAssert();
         String expect = "The product has been added to your ";
@@ -71,15 +71,15 @@ public class C9_ShopCartDef {
         mobbuy.assertAll();
         Thread.sleep(1500);
     }
-    @And("user go to Shopping Cart page")
-    public void userGoToShoppingCartPage() throws InterruptedException {
+    @And("open Shop Cart page")
+    public void open_shop_cart_page() throws InterruptedException {
         Thread.sleep(3000);
         Pag4.ShopCartBut().click();
 
         //product
     }
-    @Then("user update Shopping cart Quantity")
-    public void userUpdateShoppingCartQuantity() throws InterruptedException {
+    @Then("update Shop cart Quantity")
+    public void update_shop_cart_qua() throws InterruptedException {
        Thread.sleep(2000);
 
         Pag4.quant1().clear();
@@ -91,14 +91,14 @@ public class C9_ShopCartDef {
 
     }
 
-    @And("user remove one of items from cart")
-    public void userRemoveOneOfItmesFromCart() throws InterruptedException {
+    @And("remove one item from shop cart")
+    public void remo_one_item() throws InterruptedException {
         Pag4.removeItem().click();
         Thread.sleep(1500);
     }
 
-    @Then("user select size and color")
-    public void userSelectSizeAndColor() throws InterruptedException {
+    @Then("confirm size and color")
+    public void select_size_color() throws InterruptedException {
         Thread.sleep(2000);
         Pag4.shoAdd().click();
         Select select = new Select(Pag4.size());
@@ -106,8 +106,8 @@ public class C9_ShopCartDef {
         Pag4.slecColor().click();
     }
 
-    @Then("user select Mobile HTC One Mini Blue")
-    public void userSelectMobileHTCOneMiniBlue() throws InterruptedException {
+    @Then("chose Mobile HTC Mini Blue")
+    public void select_mob_HTC_mini_blue() throws InterruptedException {
 
         Pag4.HTCblue().click();
         Pag4.CompareBut().click();

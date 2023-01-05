@@ -13,7 +13,7 @@ public class C5_CurrDef {
 
     P3_HomPag Pag3 = new P3_HomPag();
 
-    @Given("user clicks on currencies list and select euro")
+    @Given("chose Euro from currencies list")
     public void searchBox()
     {
         WebElement listCurrency = Hooks.driver.findElement(By.id("customerCurrency"));
@@ -21,13 +21,13 @@ public class C5_CurrDef {
         clselect.selectByVisibleText("Euro");
     }
 
-    @Then("user can see € sign in products")
-    public void userCanSee€SignInProducts() {
+    @Then("the currencie will change")
+    public void curren_change() {
 
         for (double x = 0; x < Pag3.prices().size(); x++ )
         {
           String value = Pag3.prices().get((int) x).getText();
-            System.out.println("Itemes price change to Euro :" + value);
+            System.out.println("Price change to Euro :" + value);
             Assert.assertTrue(true, value);
         }
     }

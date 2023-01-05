@@ -13,23 +13,23 @@ public class C11_CompDef {
     P5_WishCom Pag5 = new P5_WishCom();
     P4_ShopCart PG95 = new P4_ShopCart();
 
-    @Given("user go to Electronic cat")
+    @Given("go to Electronic cat")
     public void user_go_to_electronic_cat() throws InterruptedException {
         Thread.sleep(3000);
         PG95.electronics().click();}
 
-    @And("user sel Cell phone Subcategory")
+    @And("select Cell phone subcat")
     public void user_sel_cell_phone_subcategory() {
         PG95.SubcatElc().click();
     }
 
-    @Then("user sel Mobile HTC One M-8")
+    @Then("select Nokia lumia mobile")
     public void user_sel_mobile_htc_one_m() {
-        PG95.HTC_M8().click();
+        PG95.Nokia_lumia().click();
     }
 
-    @Then("user add mobile to compare list")
-    public void userAddMobileToCompareList() throws InterruptedException {
+    @Then("add mobile to compare")
+    public void add_mobile_compare() throws InterruptedException {
         Pag5.CompareBut().click();
         Thread.sleep(3000);
         SoftAssert buy = new SoftAssert();
@@ -41,8 +41,8 @@ public class C11_CompDef {
         buy.assertAll();
     }
 
-    @Then("user go to Compare Page")
-    public void userGoToComparePage() {
+    @Then("open Compare Page")
+    public void openn_compare_page() {
         Pag5.ComparePG().click();
         SoftAssert see1 = new SoftAssert();
         String expect = "Compare products";

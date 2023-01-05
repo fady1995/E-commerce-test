@@ -10,8 +10,8 @@ public class C10_WishDef {
 
     P5_WishCom Pag5 = new P5_WishCom();
 
-    @Then("user add item to Wishlist")
-    public void userAddItemToWishlist() throws InterruptedException {
+    @Then("add item to Wishlist")
+    public void add_item_wishlist() throws InterruptedException {
         Pag5.whishBt2().click();
         Thread.sleep(3000);
         SoftAssert buy = new SoftAssert();
@@ -23,9 +23,9 @@ public class C10_WishDef {
         buy.assertAll();
     }
 
-    @And("user select Windows-8-Pro and added to Wishlist")
-    public void userSelectWindowsWishlist() throws InterruptedException {
-        Pag5.win8add().click();
+    @And("chose Sound Forge Pro 11 and add it  to Wishlist")
+    public void select_win_proWishlist() throws InterruptedException {
+        Pag5.ForgePro().click();
         Pag5.whishBt().click();
         Thread.sleep(3000);
         SoftAssert buy = new SoftAssert();
@@ -37,8 +37,8 @@ public class C10_WishDef {
         buy.assertAll();
     }
 
-    @Then("user go to Wishlist page and view items")
-    public void userGoToWishlistPageAndViewItems() throws InterruptedException {
+    @Then("open Wishlist page then check the items")
+    public void open_wishlist_page() throws InterruptedException {
         Thread.sleep(3000);
         Pag5.wishPageBut().click();
         Thread.sleep(3000);

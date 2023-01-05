@@ -10,13 +10,13 @@ public class P5_WishCom {
 
     public WebElement whishBt()
     {
-        return Hooks.driver.findElement(By.id("add-to-wishlist-button-11"));
+        return Hooks.driver.findElement(By.id("add-to-wishlist-button-12"));
     }
     public WebElement whishBt2()
     {
         return Hooks.driver.findElement(By.id("add-to-wishlist-button-25"));
     }
-    public WebElement win8add(){return Hooks.driver.findElement(By.cssSelector("h2 a[href=\"/windows-8-pro\"]"));}
+    public WebElement ForgePro(){return Hooks.driver.findElement(By.cssSelector("h2 a[href=\"/sound-forge-pro-11-recurring\"]"));}
     public WebElement wishPageBut(){return Hooks.driver.findElement(By.className("wishlist-label"));}
     public List<WebElement> product()
     {

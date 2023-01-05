@@ -1,19 +1,15 @@
 @smoke
 
-Feature: User could Select different Categories
+Feature: Select different Categories
 
- Background: Open Browser and Navigate to Page
-  Given user go to login page
-  Then user enter email "testEmail@1example.com" and Password "Fady@1234"
-  When user clicks on login button
+ Background: Browser will open then Navigate
 
-  #Scenario SC6
-  Scenario: SC6- Logged user could select different Categories
-   Given user select different category tabs
-   Then user select Computers and go to sub category Software
-   And user select Windows-8-Pro
-   When user clicks on currencies list and select euro
-   Then user can see € sign in products
+
+  #Scenario 6
+  Scenario: Logged user could select different Categories
+
+   Given select different category from the drop menu
+   Then chose computers then sub cat Software
 
 
 
